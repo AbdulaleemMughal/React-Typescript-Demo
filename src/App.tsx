@@ -6,7 +6,7 @@ import PersonList from "./components/PersonList";
 import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
 // import Button from "./components/Button";
-import Input from "./components/Input";
+// import Input from "./components/Input";
 import Container from "./components/Container";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import Box from "./components/context/Box";
@@ -19,6 +19,8 @@ import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
 import Button from "./components/html/Button";
+import Input from "./components/html/Input";
+import Test from "./components/polyphormic/Test";
 
 function App() {
   const personName = {
@@ -88,7 +90,11 @@ function App() {
       {/* <RandomNumber value={20} isPositive={true} /> */}
       {/* <Toast position='center' /> */}
 
-      <Button variant="primary">Primary Button</Button>
+      {/* <Button variant="primary">Primary Button</Button> */}
+      {/* <Input width={30} value='' /> */}
+      <Test as="h1" size="sm">Heading</Test>
+      <Test as='p' size="sm">paragraph</Test>
+      <Test as='label' htmlFor='someId' size="sm">label</Test>
     </div>
   );
 }
